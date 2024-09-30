@@ -1,0 +1,171 @@
+/* Google Fonts Link */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/futura-font@1.0.0/styles.min.css");
+
+@font-face {
+  font-family: "Futura";
+  src: url("fonts/futur.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura-Condensed";
+  src: url("fonts/futura.ttf") format("truetype");
+  font-weight: 500; /* Medium Condensed */
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Futura-Condensed", sans-serif; /* Default font */
+}
+#check {
+  display: none;
+}
+
+nav {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center items */
+  background-color: #ffffff; /* Background color */
+  padding: 10px 20px; /* Padding for nav */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
+  gap: 25px;
+  border-bottom: 2px solid #6767674d;
+  font-size: 25px;
+}
+
+.logo {
+  color: #fff; /* Logo color */
+  font-size: 24px; /* Logo font size */
+}
+.logo-img {
+  height: 30px;
+  width: 60px;
+  object-fit: contain;
+}
+.ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Use flexbox for nav items */
+  gap: 20px;
+}
+.ul2 {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Use flexbox for nav items */
+  gap: 25px;
+  margin-left: auto;
+}
+.ad-ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.ad-nav {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  opacity: 0.9;
+  z-index: 1;
+  font-size: 2vw;
+  transition: background-color 0.4s ease, top 0.4s ease; /* Smooth transition */
+}
+#trylive {
+  color: blue;
+}
+#more {
+  color: tomato;
+}
+a {
+  color: #000000; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.checkbtn {
+  display: none; /* Hide checkbox */
+}
+
+section {
+  background: url("header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-bottom: 2000px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.overlay {
+  text-align: center;
+  color: tomato;
+  font-size: 10vw;
+  font-family: "Futura", sans-serif;
+  font-style: bold;
+  z-index: 0;
+  font-weight: 700;
+  padding: 0 20px;
+}
+/* Responsive design */
+@media (max-device-width: 768px) {
+  .checkbtn {
+    display: block; /* Show checkbox in mobile view */
+  }
+
+  .ul,
+  .ul2 {
+    display: none; /* Hide nav items in mobile view */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position them absolutely */
+    background-color: #000000; /* Background color for dropdown */
+    top: 60px; /* Position below nav */
+    left: 0;
+    right: 0;
+  }
+  .responsive {
+    color: white;
+  }
+
+  input[type="checkbox"]:checked ~ .ul {
+    z-index: 2;
+    display: flex; /* Show nav items when checkbox is checked */
+  }
+  input[type="checkbox"]:checked ~ .ul2 {
+    z-index: 2;
+    display: flex; /* Show nav items when checkbox is checked */
+  }
+
+  .li {
+    margin: 10px 0; /* Space between stacked items */
+    text-align: left;
+    margin-left: 20px;
+    color: #ffffff;
+  }
+
+  .li2 {
+    margin: 10px 0;
+    text-align: left;
+    margin-left: 20px;
+    color: #ffffff;
+  }
+  #trylive {
+    padding-top: 20px;
+  }
+  nav {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}

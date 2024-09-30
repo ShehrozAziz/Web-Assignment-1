@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/futura-font@1.0.0/styles.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Question2.css" />
+    <title>Question 2</title>
+  </head>
+  <body>
+    <h1>Job Application Form</h1>
+    <div id="toast">Please fill out all required fields!</div>
+    <div class="container mt-5">
+      <p id="required_indication">* indicates a required field</p>
+      <form id="applicationForm">
+        <h2>Personal Information</h2>
+        <div class="mb-3">
+          <label for="first_Name" class="form-label">Full Name</label>
+          <div class="row g-2">
+            <div class="col-md">
+              <input
+                type="text"
+                class="form-control"
+                id="first_Name"
+                placeholder="First Name"
+                required
+              />
+            </div>
+            <div class="col-md">
+              <input
+                type="text"
+                class="form-control"
+                id="last_Name"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="phone_Number" class="form-label">Phone Number</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone_Number"
+            placeholder="03XX-XXXXXXX"
+            required
+          />
+          <p id="phone_error">Enter in Correct Format: 03XX-XXXXXXX</p>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="abc@xyz.com"
+            required
+          />
+          <p id="email_error">Enter in Correct Format: abc@xyz.com</p>
+        </div>
+
+        <div class="mb-3">
+          <label for="street" class="form-label">Address</label>
+          <div class="row g-2">
+            <div class="col-md-5">
+              <input
+                type="text"
+                class="form-control"
+                id="street"
+                placeholder="Street Address"
+                required
+              />
+            </div>
+            <div class="col-md-3">
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                placeholder="City"
+                required
+              />
+            </div>
+            <div class="col-md-2">
+              <input
+                type="text"
+                class="form-control"
+                id="state"
+                placeholder="State"
+                required
+              />
+            </div>
+            <div class="col-md-2">
+              <input
+                type="text"
+                class="form-control"
+                id="zip"
+                placeholder="Zip"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <h2>Resume and Cover Letter</h2>
+        <div class="mb-3">
+          <label for="resume" class="form-label">Upload Resume</label>
+          <input type="file" class="form-control" id="resume" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="coverLetter" class="form-label">Cover Letter</label>
+          <input type="file" class="form-control" id="coverLetter" required />
+        </div>
+        <h2>Education</h2>
+        <div class="mb-3">
+          <label for="educationLevel" class="form-label"
+            >Highest Level of Education Attained</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="educationLevel"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="school" class="form-label">Name of University</label>
+          <input type="text" class="form-control" id="school" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="major" class="form-label">Major</label>
+          <input type="text" class="form-control" id="major" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="graduationYear" class="form-label">Graduation Year</label>
+          <select class="form-control" id="graduationYear" required>
+            <option value="" disabled selected>Select Year</option>
+          </select>
+        </div>
+        <h2>Employment History</h2>
+        <div class="mb-3">
+          <label for="jobTitles" class="form-label">Previous Job Titles</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitles"
+            placeholder="Comma Seperated"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="companyNames" class="form-label">Company Names</label>
+          <input
+            type="text"
+            class="form-control"
+            id="companyNames"
+            placeholder="Comma Seperated"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="EstartDate" class="form-label"
+            >Employment Dates (Start and End)</label
+          >
+          <div class="row g-2">
+            <div class="col-md">
+              <input
+                type="date"
+                class="form-control"
+                id="EstartDate"
+                placeholder="Start Date"
+                required
+              />
+            </div>
+            <div class="col-md">
+              <input
+                type="date"
+                class="form-control"
+                id="EendDate"
+                placeholder="End Date"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="jobResponsibilities" class="form-label"
+            >Job Responsibilities</label
+          >
+          <textarea
+            class="form-control"
+            id="jobResponsibilities"
+            rows="4"
+            placeholder="Comma Seperated"
+            required
+          ></textarea>
+        </div>
+        <h2>Skills</h2>
+        <div class="mb-3">
+          <label for="relevantSkills" class="form-label">Relevant Skills</label>
+          <input
+            type="text"
+            class="form-control"
+            id="relevantSkills"
+            placeholder="Comma Seperated"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="certifications" class="form-label">Certifications</label>
+          <input
+            type="text"
+            class="form-control"
+            id="certifications"
+            placeholder="Comma Seperated"
+          />
+        </div>
+        <h2>Availability</h2>
+        <div class="mb-3">
+          <label for="startDate" class="form-label">Start Date</label>
+          <input type="date" class="form-control" id="startDate" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="PrefferedSchedule" class="form-label"
+            >Preffered Time Schedule (Start and End)</label
+          >
+          <div class="row g-2">
+            <div class="col-md">
+              <input
+                type="time"
+                class="form-control"
+                id="PrefferedSchedule"
+                placeholder="Start Date"
+                required
+              />
+            </div>
+            <div class="col-md">
+              <input
+                type="time"
+                class="form-control"
+                id="EendDate"
+                placeholder="End Date"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3 form-check">
+          <label class="form-check-label" for="willingToRelocate"
+            >Are You Willing to Relocate?</label
+          >
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="willingToRelocate"
+            required
+          />
+        </div>
+
+        <h2>References</h2>
+        <div class="mb-3">
+          <label for="referenceName" class="form-label">Reference Name</label>
+          <input type="text" class="form-control" id="referenceName" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="referenceContact" class="form-label"
+            >Reference Contact Information</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="referenceContact"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="relationshipToApplicant" class="form-label"
+            >Relationship to Applicant</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="relationshipToApplicant"
+            required
+          />
+        </div>
+
+        <h2>Additional Questions</h2>
+        <div class="mb-3">
+          <label for="whyWorkForCompany" class="form-label"
+            >Why do you want to work for this company?</label
+          >
+          <textarea
+            class="form-control"
+            id="whyWorkForCompany"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <h2>Consent and Agreement</h2>
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="agreement"
+            required
+          />
+          <label class="form-check-label" for="agreement"
+            >I agree to the terms and conditions</label
+          >
+        </div>
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="privacyPolicy"
+            required
+          />
+          <label class="form-check-label" for="privacyPolicy"
+            >I acknowledge the Privacy Policy</label
+          >
+        </div>
+        <button type="button" class="btn btn-primary" onclick="submitForm()">
+          Submit Application
+        </button>
+      </form>
+    </div>
+    <div class="container mt-3 text-center">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        onclick="displayTable()"
+        id="btnDisplayTable"
+      >
+        Display Table
+      </button>
+    </div>
+
+    <div class="container mt-3">
+      <table
+        class="table table-responsive"
+        style="display: none"
+        id="dataTable"
+      >
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Resume</th>
+            <th>Cover Letter</th>
+          </tr>
+        </thead>
+        <tbody id="dataTableBody">
+          <tr>
+            <td data-label="Name">John Doe</td>
+            <td data-label="Email">john.doe@example.com</td>
+            <td data-label="Phone Number">03XX-XXXXXXX</td>
+            <td data-label="Resume">Link to Resume</td>
+            <td data-label="Cover Letter">Link to Cover Letter</td>
+          </tr>
+          <tr>
+            <td data-label="Name">John Doe</td>
+            <td data-label="Email">john.doe@example.com</td>
+            <td data-label="Phone Number">03XX-XXXXXXX</td>
+            <td data-label="Resume">Link to Resume</td>
+            <td data-label="Cover Letter">Link to Cover Letter</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <script src="Question2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Futura";
+  src: url("fonts/Futura Bold Italic font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura-Condensed";
+  src: url("fonts/futura.ttf") format("truetype");
+  font-weight: 500; /* Medium Condensed */
+  font-style: normal;
+}
+body {
+  font-family: "Futura-Condensed", sans-serif;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: blue;
+  font-family: "Futura", sans-serif;
+}
+h1 {
+  font-family: "Futura", sans-serif;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: black;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-left: 10vw;
+  border-radius: 10px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+#required_indication {
+  text-align: right;
+  color: red;
+}
+/* Toast container */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 30px; /* Change bottom to top */
+  transform: translateX(-50%);
+  font-size: 17px;
+}
+
+/* Show the toast */
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadeInOut 2s ease-in-out forwards;
+  animation: fadeInOut 2s ease-in-out forwards;
+}
+
+/* Animations */
+@-webkit-keyframes fadeInOut {
+  0% {
+    top: 0; /* Start from the top */
+    opacity: 0;
+  }
+  10% {
+    top: 30px; /* Move down to the position */
+    opacity: 1;
+  }
+  90% {
+    top: 30px; /* Stay in position */
+    opacity: 1;
+  }
+  100% {
+    top: 0; /* Move back to the top */
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    top: 0; /* Start from the top */
+    opacity: 0;
+  }
+  10% {
+    top: 30px; /* Move down to the position */
+    opacity: 1;
+  }
+  90% {
+    top: 30px; /* Stay in position */
+    opacity: 1;
+  }
+  100% {
+    top: 0; /* Move back to the top */
+    opacity: 0;
+  }
+}
+
+#phone_error,
+#email_error {
+  color: red;
+  margin-top: 5px;
+}
+.table {
+  max-width: 80vw;
+  justify-content: center;
+}
+.table-responsive {
+  overflow-x: auto;
+}
+input[type="file"] {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 80vw;
+}
+
+button {
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  #dataTable {
+    display: block;
+    width: 100%;
+  }
+
+  #dataTable thead {
+    display: none; /* Hide the header on mobile */
+  }
+
+  #dataTable tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  #dataTable td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #dataTable td::before {
+    content: attr(data-label); /* Show column name as a label */
+    flex: 1; /* Make labels take up space */
+    font-weight: bold;
+  }
+}
+
+textarea {
+  resize: none;
+}
